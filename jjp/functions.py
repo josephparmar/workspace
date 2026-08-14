@@ -13,7 +13,6 @@ def sort_dataframe(data : str, header : str):
 
     Returns:
         df : sorted pandas dataframe. Turn column into numpy array by using df["header"].to_numpy()
-
     '''
     df = pd.read_csv(data)
     df.convert_dtypes()
