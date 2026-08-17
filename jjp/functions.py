@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def sort_dataframe(data : str, header : str):
+def sort_dataframe(data : str, sort : str):
     '''
     Converts the input csv to a pandas dataframe, 
     converts all the data types to their auto types (str, int etc.),
@@ -16,6 +16,6 @@ def sort_dataframe(data : str, header : str):
     '''
     df = pd.read_csv(data)
     df.convert_dtypes()
-    if header != None:
-        df.sort_values(by=[header], inplace=True, ignore_index=True)
+    if sort != None:
+        df.sort_values(by=[sort], inplace=True, ignore_index=True)
     return df 
